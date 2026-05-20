@@ -1,17 +1,6 @@
-/*
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Sono:wght@400;500;600&display=swap"
-  rel="stylesheet"
-/>
-*/
+import {createGlobalStyle} from "styled-components"
 
-/* Colors adapted from https://tailwindcss.com/docs/customizing-colors */
+const GlobalStyles = createGlobalStyle`
 
 :root {
   /* Indigo */
@@ -76,9 +65,7 @@
   margin: 0;
 
   /* Creating animations for dark mode */
-  transition:
-    background-color 0.3s,
-    border 0.3s;
+  transition: background-color 0.3s, border 0.3s;
 }
 
 html {
@@ -89,9 +76,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--color-grey-700);
 
-  transition:
-    color 0.3s,
-    background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
@@ -159,7 +144,7 @@ img {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
-/*FOR DARK MODE*/
+/* FOR DARK MODE */
 
 --color-grey-0: #18212f;
 --color-grey-50: #111827;
@@ -196,3 +181,6 @@ img {
 
 --image-grayscale: 10%;
 --image-opacity: 90%;
+`
+
+export default GlobalStyles
