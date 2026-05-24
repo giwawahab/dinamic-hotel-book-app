@@ -7,5 +7,5 @@ export function useCabins() {
     queryFn: getCabins,
   });
 
-  return [cabins, isLoading];
+  return { cabins, isLoading };
 }
